@@ -1,11 +1,14 @@
 let movieData = {
     info: 'A verry good movie about a lovley Alien',
     title: 'E.T.',
-    actor: ['ET','Boy with game issues','Gangster Goverment']
+    actor: ['ET','Boy with game issues','Gangster Goverment'],
 };
 
+
 movieTitleWithDescr();
+
 actorList();
+
 
 
 
@@ -14,7 +17,14 @@ actorList();
 function movieTitleWithDescr() {
     document.getElementById("descText").innerText = movieData.info;
     document.getElementById("title").innerText = movieData.title;
+    
 }
+
+
+
+
+
+
 
 function actorList() {
     let tempActor = "";

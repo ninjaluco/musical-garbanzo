@@ -17,10 +17,7 @@ img {
 }
 
 #MainBox{
-    /* flex-grow: 1;   
-    padding-bottom: 15px;
-    /* flex-direction: column;
-    justify-content: center; */ 
+
     padding: 15px;
     padding-top: 15px;
     padding-right: 15px;
@@ -28,3 +25,11 @@ img {
     display: flex;
     background-color: #ff9d47;   
 }
+
+.selectorForFilledStars {
+    color: red;
+  }
+
+  .selectorForEmptyStars {
+    color: rgb(180, 180, 180);
+  }
