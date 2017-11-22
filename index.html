@@ -8,18 +8,21 @@
     <title>Document</title>
     
 </head>
-<body>
+<body ng-app="reviewApp">
     
-    <div id="MainBox">
+    <div id="MainBox" ng-controller="reviewController as ctrl" class="conatiner">
+        
         <div id="img"><img src="http://wortraub.com/wp-content/uploads/2012/10/ET_thegreenplanet_icon.png"></div>
         <div id="desc">
-            <h1 id="title"></h1>
+            <h1 id="title">{{ctrl.review.title}}</h1>
             
-            <p id="descText"></p>
+            <p id="descText">{{ctrl.review.info}}</p>
             
-            <div id="stars"></div>
-            <ul id="actorList">
-                                
+            <div id="stars">
+                    <span ng-repeat="i in [1,2,3,4,5]" ng-class="{selectorForFilledStars: ctrl.rating >= i}" ng-click="ctrl.changeStarRating(i)">&#9733;</span>
+            </div>
+            <ul id="actorList" >
+                 <li ng-repeat="actor in ctrl.review.actor">{{actor}}</li>                              
             </ul>
         </div>
     </div>
