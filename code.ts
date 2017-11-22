@@ -1,6 +1,6 @@
 
 let starinput = 5;
-import{movieData} from "./data";
+import {movieData} from "./data";
 import * as $ from "jquery";
 // let movieData = require("./data");
 // let $ = require("jquery");
@@ -25,7 +25,7 @@ function starsInsert() {
         pageRating += '<span id =\'star' + i + '\' class=\'selectorForEmptyStars\' data-value=\'' + i + '\'>&#9733;</span>';
     }
     document.getElementById('stars').innerHTML = pageRating;
-    console.log("hwat", pageRating);
+    console.log("whaaaat", pageRating);
 }
 function changeStarRating(rate){
 
@@ -48,3 +48,20 @@ function changeStarRating(rate){
 }
 
 
+movieTitleWithDescr();
+actorList();
+
+//==============Functions========================================
+function movieTitleWithDescr() {
+    document.getElementById("descText").innerText = movieData.info;
+    document.getElementById("title").innerText = movieData.title;
+    console.log("adding title!!")
+}
+
+function actorList() {
+    let tempActor = "";
+    movieData.actor.forEach(element => {
+        tempActor += "<li>" + element + "</li>";
+    });
+    document.getElementById("actorList").innerHTML = tempActor;
+}
