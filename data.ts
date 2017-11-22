@@ -1,3 +1,5 @@
+import {Review} from "./interfaces";
+
 export const movieData = {
     info: 'A verry good movie about a lovley Alien',
     title: 'E.T.',
