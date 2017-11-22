@@ -6,8 +6,10 @@
     "webpack": "^3.8.1"
   },
   "scripts": {
-    "styles": "lessc styles.less styles.css",
-    "bundle": "webpack"
+    "styles": "lessc StyleSheet.less distribution/StyleSheet.css",
+    "bundle": "webpack",
+    "copyindex": "cp index.html distribution/index.html",
+    "build": "npm run bundle && npm run styles && npm run copyindex"
   },
   "dependencies": {
     "jquery": "^3.2.1"
