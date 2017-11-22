@@ -1,36 +1,30 @@
-let starinput = 5;
 
+let starinput = 5;
+let movieData = require("./data");
+let $ = require("jquery");
+starsInsert();
+
+//-------------------------Actions-------------------------------------------------------------------------
 $(document).ready(function(){
-    $('#stars').on('mouseover', function(){
-        var onStar = parseInt($(this).data('value'), 10);
-        // alert("hover")
+    $('#stars').on('mouseover', 'span', function(e){
+        var onStar = $(e.target).attr('data-value');                 
     });   
     
     $('#stars').on('click','span',function(e){
-        var onStar = $(e.target).attr('data-value');
-        alert(onStar);
-        changeStarRating(onStar);
-        
-    });
-    
-    
+        var onStar = $(e.target).attr('data-value');        
+        changeStarRating(onStar);        
+    });     
 });
 
-
-starsInsert();
-
-
-
+//-------------------------Functions----------------------------------------------------------------------
 function starsInsert() {
     let pageRating = "";
     for (let i = 1; i <= starinput; i++) {
         pageRating += '<span id =\'star' + i + '\' class=\'selectorForEmptyStars\' data-value=\'' + i + '\'>&#9733;</span>';
     }
-    document.getElementById('stars').innerHTML = pageRating;    
+    document.getElementById('stars').innerHTML = pageRating;
+    console.log("hwat", pageRating);
 }
-
-
-
 function changeStarRating(rate){
 
     for (let i = 1; i <= starinput; i++) {
@@ -46,10 +40,7 @@ function changeStarRating(rate){
                 star.classList.remove("selectorForFilledStars");
                 star.classList.add("selectorForEmptyStars");                
             }
-        }           
-            
-        
-       
+        }
         
     }
 }

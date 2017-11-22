@@ -4,14 +4,10 @@ let movieData = {
     actor: ['ET','Boy with game issues','Gangster Goverment'],
 };
 
+module.exports = movieData;
 
 movieTitleWithDescr();
-
 actorList();
-
-
-
-
 
 //==============Functions========================================
 function movieTitleWithDescr() {
@@ -19,12 +15,6 @@ function movieTitleWithDescr() {
     document.getElementById("title").innerText = movieData.title;
     
 }
-
-
-
-
-
-
 
 function actorList() {
     let tempActor = "";

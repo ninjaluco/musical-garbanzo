@@ -1,0 +1,16 @@
+{
+  "name": "",
+  "version": "",
+  "devDependencies": {
+    "less": "^2.7.3",
+    "webpack": "^3.8.1"
+  },
+  "scripts": {
+    "styles": "lessc styles.less styles.css",
+    "bundle": "webpack"
+  },
+  "dependencies": {
+    "jquery": "^3.2.1"
+  }
+  
+}
