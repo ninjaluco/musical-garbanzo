@@ -25,7 +25,7 @@ function starsInsert() {
         pageRating += '<span id =\'star' + i + '\' class=\'selectorForEmptyStars\' data-value=\'' + i + '\'>&#9733;</span>';
     }
     document.getElementById('stars').innerHTML = pageRating;
-    console.log("whaaaat", pageRating);
+   
 }
 function changeStarRating(rate){
 
@@ -55,7 +55,7 @@ actorList();
 function movieTitleWithDescr() {
     document.getElementById("descText").innerText = movieData.info;
     document.getElementById("title").innerText = movieData.title;
-    console.log("adding title!!")
+   
 }
 
 function actorList() {
